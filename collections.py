@@ -37,6 +37,56 @@
 # stop_time = time.time()
 # print(f"Dict time was {stop_time - start_time:.6f}")
 
+# index position   0        1       2        3/-1
+#colours =       ["red", "yellow", "blue", "green"]
+
+# # direct access
+# print(colours[2])
+# print(colours[0:2])
+
+# colours[0] = "orange"
+# print(colours)
+# # nested lists
+
+# numbers = [1, 2, 3, 4,]
+# letters = ["a", "b", "c", "d"]
+
+# combined = [numbers, letters]
+
+# print(combined[0][4][0],combined[1][1])
+
+# methods
+
+# colours.sort(key=len)
+# print(colours)
+
+# join 
+
+# x = ", ".join(colours)
+
+# print(x)
+
+ drinks = {"still": ["book", "Book2"], "hot": "coffee", "fizzy": "sprite"}
+
+# direct access:
+
+# print(drinks["fizzy"])
+
+# print(drinks.get("fizzy1", "not a key!!"))
+
+# print(drinks.items())
+# print(drinks.values())
+# print(drinks.keys())
+
+exercise:
+
+Make a dictionary with authors and books (multiple). 
+AN input to ask the user for an author name.
+Print a STRING of the books! (NOT A LIST OF THE BOOKS)
+Error handling for incorrect keys. 
+
+
+
 
 
 
