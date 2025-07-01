@@ -58,12 +58,48 @@
 # else:
 #     print("not -accepted")
 
-# exercise
-- weight converter app
-- user to input a numeric weight
-- user to input a unit (kg/lbs)
-- logic: check unit
-- logic: conversion
-- print out converted result
-- error handling: unit input (loops/upper/lower)
-- optional: error handling for non-numeric input in weight. 
+# # exercise
+# - weight converter app
+# - user to input a numeric weight
+# - user to input a unit (kg/lbs)
+# - logic: check unit
+# - logic: conversion
+# - print out converted result
+# - error handling: unit input (loops/upper/lower)
+# - optional: error handling for non-numeric input in weight. 
+
+#BaseException
+#Exception
+
+# try: 
+#     result = 10/0
+# except ZeroDivisionError: # consumes the error
+#     print("Divion by zero is not allowed")
+# except Exception as e:
+#     print(f"[ERROR] an error occured - {str(e)}")
+# finally:
+#     print("clean up actions")
+
+import sys
+
+while True:
+    try:
+        weight = float(input("Enter weight: "))
+        break
+    except ValueError:
+        print("Invalid input must be numerical!!!!!!")
+        #sys.exit()
+
+
+while True:
+    unit = input("enter the unit (K or L)").upper()
+    if unit == "K":
+        converted_weight = weight / 0.44
+        print(f"converted_weight is {converted_weight}")
+        break
+    elif unit == "L":
+        converted_weight = weight * 0.44
+        print(f"converted_weight is {converted_weight}")
+        break
+    else:
+        print("Must enter K or L!!!!!")
