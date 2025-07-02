@@ -94,3 +94,7 @@ my_fruits = ["kiwi", "apple", "pear", "orange"]
 # x = [print(f"{y} is in the list") for y in [input("enter something: ") for a in range(5)]]
 
 # print(x)
+
+y = print("hello")
+print(y)
+
