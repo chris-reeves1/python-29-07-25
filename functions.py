@@ -132,5 +132,12 @@
 
 # print(apply_function(square, 10))
 
+TODO:
+till 14.40
+lab 5 and 6
+catch up previous labs
+rock paper scissor game: 
+- user to play against computer
+- keep track of games played and score
+- random.choice (import random)
 
-    
