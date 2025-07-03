@@ -95,6 +95,6 @@ my_fruits = ["kiwi", "apple", "pear", "orange"]
 
 # print(x)
 
-y = print("hello")
-print(y)
+# y = print("hello")
+# print(y)
 
