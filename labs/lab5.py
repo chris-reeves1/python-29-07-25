@@ -44,3 +44,4 @@ print(median_grade)
 output = "minimum grade: {}\nMaximum grade: {}\nAverage grade: {}\nMean grade: {}\nMedian grade: {}"
 
 print(output.format(min_grade, max_grade, average_grade, mean_grade, median_grade))
+
