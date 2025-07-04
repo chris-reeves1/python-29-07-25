@@ -27,8 +27,9 @@ requirments:
     eg:
     x = {1:"ok", 2:"well", 3: "good", 4:"very good"}
 
-    template = f"General Comments\n {student_name} did {x[{score}]} in this module..."
-    template += ""
+    template = f"General Comments\n {student_name} did {x[{score}]} in this module.../n/n"
+    template += f"Puctualiuty/n ...../n/n"
+    template += f"Further learning...."
 
 - save the feedack to a file for each student. 
     - File name should include the student name. 
