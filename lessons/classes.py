@@ -186,7 +186,7 @@ class Animal:
         print(f"{self.name} is eating")
 
     def __repr__(self):
-        return f"{self.name} - {self.species} - {self.__class__.__name__}"
+        return f"{self.name!r} - {self.species!r} - {self.__class__.__name__!r}"
 
     # def __str__(self):
     #     return self.__repr__()
@@ -234,3 +234,30 @@ print(repr(a))
 #     #and add or remove items from the product inventory.
 
 # - Time on feedback task! 
+
+def create_model(name, fields):
+    def __init__(self, **kwargs):
+        for field_name, default_value in fields.items():
+            setattr(self, field_name, kwargs.get(field_name, default_value))
+
+    def __repr__(self):
+        field_strings = [f"{k}={getattr(self, k)!r}" for k in fields]
+        return f"{name}({', '.join(field_strings)})"
+
+    return type(name, (object,), {
+        "__init__": __init__,
+        "__repr__": __repr__,
+    })
+
+
+user_schema = {
+    "name": "",
+    "email": "",
+    "is_admin": False,
+}
+
+User = create_model("User", user_schema)
+
+
+user1 = User(name="chris", email="chris@chris.com", is_admin=True)
+print(user1)
